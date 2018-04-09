@@ -1,6 +1,6 @@
-## react-fast-cli  
+## vue-xwebpack-cli  
 
-[![npm](https://img.shields.io/badge/downloads-250%2Fmonth-brightgreen.svg)](https://www.npmjs.com/package/vue-xwebpack-cli)
+[![npm](https://img.shields.io/badge/downloads-0%2Fmonth-brightgreen.svg)](https://www.npmjs.com/package/vue-xwebpack-cli)
 
 #### TEMPLATE
 
