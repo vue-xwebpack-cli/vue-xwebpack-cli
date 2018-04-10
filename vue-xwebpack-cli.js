@@ -37,7 +37,7 @@ const program = new commander.Command(packageJson.name)
         );
         console.log(
             `      ${chalk.cyan(
-                'https://github.com/react-fast-cli/react-fast-cli/issues/new'
+                'https://github.com/vue-xwepack-cli/vue-xwepack-cli/issues/new'
             )}`
         );
         console.log();
@@ -48,7 +48,7 @@ const program = new commander.Command(packageJson.name)
 if (typeof projectName === 'undefined') {
     if (program.info) {
         envinfo.print({
-            packages: ['react', 'react-dom', 'antd'],
+            packages: ['vue', 'vue-router', 'vuex'],
             noNativeIDE: true,
             duplicates: true,
         })
@@ -60,7 +60,7 @@ if (typeof projectName === 'undefined') {
     )
     console.log()
     console.log('For example:')
-    console.log(`  ${chalk.cyan(program.name())} ${chalk.green('test-react-app')}`)
+    console.log(`  ${chalk.cyan(program.name())} ${chalk.green('test-app')}`)
     console.log()
     console.log(
         `Run ${chalk.cyan(`${program.name()} --help`)} to see all options.`
@@ -75,7 +75,7 @@ function create(name, useNpm, verbose) {
     const appName = path.basename(root)
     fs.ensureDirSync(name)
 
-    console.log(`creating a new react + redux + antd project in ${chalk.green(root)}`)
+    console.log(`creating a new vue + vue-router + vuex project in ${chalk.green(root)}`)
     console.log()
 
     const useYarn = useNpm ? false : hasYarn()
@@ -216,7 +216,7 @@ function checkThatNpmCanReadCwd() {
     }
     const lines = childOutput.split('\n')
     // `npm config list` output includes: 
-    // ; cwd = /Users/userName/git/react-cli
+    // ; cwd = /Users/userName/git/vue-cli
     const prefix = '; cwd = '
     const line = lines.find(line => line.indexOf(prefix) === 0)
     if (typeof line !== 'string') {
